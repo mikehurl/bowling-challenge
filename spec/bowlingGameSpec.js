@@ -10,7 +10,7 @@ describe('Bowling Game', function() {
   });
 
   it("starts the game on 0 points", function() {
-    expect(game.totalScore).toEqual(0)
+    expect(game.calculateTotalScore()).toEqual(0)
    });
 
  });

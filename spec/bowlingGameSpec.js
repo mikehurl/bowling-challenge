@@ -6,7 +6,7 @@ describe('Bowling Game', function() {
   var game;
 
   beforeEach(function() {
-    game = new bowlingGame();
+    game = new BowlingGame();
   });
 
   it("starts the game on 0 points", function() {

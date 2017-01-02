@@ -5,6 +5,7 @@ function bowlingGame() {
   this.totalScore = 0;
   this.currentFrame = 1;
   this.currentPins = 10;
+  this.pinsKnockedOver = 0;
 }
 
 bowlingGame.prototype.calculateTotalScore = function() {
@@ -20,5 +21,9 @@ bowlingGame.prototype.getCurrentPins = function() {
 };
 
 bowlingGame.prototype.bowl = function() {
-  return this.currentFrame += 0.5;
+  this.currentFrame += 0.5;
+};
+
+bowlingGame.prototype.getPinsKnockedOver = function() {
+  return Math.floor(Math.random()*10) + 1;
 };

@@ -1,15 +1,21 @@
 /*jslint node: true */
 'use strict';
 
-function BowlingGame() {
+function bowlingGame() {
   this.totalScore = 0;
+  this.frame = new Frame();
   this.currentFrame = 1;
+  this.currentPins = 10;
 }
 
-BowlingGame.prototype.calculateTotalScore = function() {
+bowlingGame.prototype.calculateTotalScore = function() {
   return this.totalScore;
 };
 
-BowlingGame.prototype.getCurrentFrame = function() {
+bowlingGame.prototype.getCurrentFrame = function() {
   return this.currentFrame;
+};
+
+bowlingGame.prototype.getCurrentPins = function() {
+  return this.currentPins;
 };

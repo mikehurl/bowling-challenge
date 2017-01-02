@@ -20,4 +20,11 @@ describe('Bowling Game', function() {
   it("starts with 10 pins per frame", function() {
      expect(game.getCurrentPins()).toEqual(10);
    });
+
+  it("only allows a player to bowl up to two times per frame", function() {
+      game.bowl();
+      game.bowl();
+      expect(game.getCurrentFrame()).toEqual(2);
+    });
+
  });
